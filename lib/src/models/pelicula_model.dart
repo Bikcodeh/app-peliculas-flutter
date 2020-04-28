@@ -63,4 +63,12 @@ class Pelicula {
     overview          = json['overview'];
     releaseDate       = json['release_date'];
   }
+
+  getPosterImg() {
+    if ( posterPath == null) {
+      return 'https://cdn11.bigcommerce.com/s-whhy1apb80/stencil/942bf8b0-5333-0138-58d0-0242ac11000c/icons/icon-no-image.svg';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+  }
 }
