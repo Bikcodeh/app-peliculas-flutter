@@ -12,8 +12,6 @@ class HomePage extends StatelessWidget {
     peliculasProvider.getPopulares();
 
     return Scaffold(
-        resizeToAvoidBottomPadding: false,
-        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           centerTitle: false,
           title: Text('Peliculas en cines'),

@@ -71,4 +71,12 @@ class Pelicula {
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
     }
   }
+
+  getBackgroundImg() {
+    if ( backdropPath == null) {
+      return 'https://cdn11.bigcommerce.com/s-whhy1apb80/stencil/942bf8b0-5333-0138-58d0-0242ac11000c/icons/icon-no-image.svg';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
+    }
+  }
 }
