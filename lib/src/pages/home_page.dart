@@ -8,6 +8,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    peliculasProvider.getPopulares();
+
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         resizeToAvoidBottomInset: false,
@@ -59,11 +62,11 @@ class HomePage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 5.0),
-          FutureBuilder(
-            future: peliculasProvider.getPopulares(),
+          StreamBuilder(
+            stream: peliculasProvider.popularesStream,
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               if (snapshot.hasData) {
-                return MovieHorizontal(listaItems: snapshot.data);
+                return MovieHorizontal(listaItems: snapshot.data, siguientePagina: peliculasProvider.getPopulares,);
               } else {
                 return Container(
                     height: 400.0,
