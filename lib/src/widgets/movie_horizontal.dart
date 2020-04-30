@@ -7,14 +7,16 @@ class MovieHorizontal extends StatelessWidget {
 
   MovieHorizontal({@required this.listaItems, @required this.siguientePagina});
 
-  final _pageController = new PageController(initialPage: 1, viewportFraction: 0.3);
+  final _pageController =
+      new PageController(initialPage: 1, viewportFraction: 0.3);
 
   @override
   Widget build(BuildContext context) {
     final _screenSize = MediaQuery.of(context).size;
 
     _pageController.addListener(() {
-      if ( _pageController.position.pixels >= _pageController.position.maxScrollExtent - 200) {
+      if (_pageController.position.pixels >=
+          _pageController.position.maxScrollExtent - 200) {
         siguientePagina();
       }
     });
@@ -61,12 +63,13 @@ class MovieHorizontal extends StatelessWidget {
   }
 
   Widget _crearTarjeta(BuildContext context, Pelicula pelicula) {
-
-     final peliculaTarjeta = Container(
-        margin: EdgeInsets.only(right: 15.0),
-        child: Column(
-          children: <Widget>[
-            ClipRRect(
+    final peliculaTarjeta = Container(
+      margin: EdgeInsets.only(right: 15.0),
+      child: Column(
+        children: <Widget>[
+          Hero(
+            tag: pelicula.id,
+            child: ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
               child: FadeInImage(
                 placeholder: AssetImage('assets/img/no-image.jpg'),
@@ -75,21 +78,22 @@ class MovieHorizontal extends StatelessWidget {
                 height: 120.0,
               ),
             ),
-            SizedBox(height: 5.0),
-            Text(
-              pelicula.title,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.caption,
-            ),
-          ],
-        ),
-      );
+          ),
+          SizedBox(height: 5.0),
+          Text(
+            pelicula.title,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.caption,
+          ),
+        ],
+      ),
+    );
 
-      return GestureDetector(
-        child: peliculaTarjeta,
-        onTap: () {
-          Navigator.pushNamed(context, 'detalle', arguments: pelicula);
-        },
-      );
+    return GestureDetector(
+      child: peliculaTarjeta,
+      onTap: () {
+        Navigator.pushNamed(context, 'detalle', arguments: pelicula);
+      },
+    );
   }
 }
