@@ -17,7 +17,9 @@ class HomePage extends StatelessWidget {
           title: Text('Peliculas en cines'),
           backgroundColor: Colors.indigoAccent,
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.search), onPressed: () {})
+            IconButton(icon: Icon(Icons.search), onPressed: () {
+              // showSearch(context: null, delegate: null)
+            })
           ],
         ),
         body: ListView(
