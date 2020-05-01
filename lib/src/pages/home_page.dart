@@ -27,6 +27,8 @@ class HomePage extends StatelessWidget {
           ],
         ),
         body: ListView(
+          padding: const EdgeInsets.all(8),
+          scrollDirection: Axis.vertical,
           children: <Widget>[
             Column(
               children: <Widget>[

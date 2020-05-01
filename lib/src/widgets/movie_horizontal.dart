@@ -28,7 +28,7 @@ class MovieHorizontal extends StatelessWidget {
         pageSnapping: false,
         controller: _pageController,
         itemBuilder: (BuildContext context, int index) {
-          return _crearTarjeta(context, listaItems[index]);
+          return ListView(children: <Widget>[  _crearTarjeta(context, listaItems[index]) ],);
         },
         itemCount: listaItems.length,
       ),
@@ -77,7 +77,7 @@ class MovieHorizontal extends StatelessWidget {
                 placeholder: AssetImage('assets/img/no-image.jpg'),
                 image: NetworkImage(pelicula.getPosterImg()),
                 fit: BoxFit.fill,
-                height: 120.0,
+                height: 100.0,
               ),
             ),
           ),
