@@ -19,10 +19,10 @@ En esta aplicacion usamos componentes como lo son:
 A su vez estamos haciendo uso de la api The Movie DB(https://www.themoviedb.org/) para obtener todas las peliculas
 que usamos en la aplicación.
 
-https://github.com/Bikcodeh/app-peliculas-flutter/assets/pictures/home_page.png
+(https://github.com/Bikcodeh/app-peliculas-flutter/blob/master/assets/pictures/detail_page.png)
 
-https://github.com/Bikcodeh/app-peliculas-flutter/assets/pictures/detail_page.png
+(https://github.com/Bikcodeh/app-peliculas-flutter/blob/master/assets/pictures/detail_page.png)
 
-https://github.com/Bikcodeh/app-peliculas-flutter/assets/pictures/detail_page_bottom.png
+(https://github.com/Bikcodeh/app-peliculas-flutter/blob/master/assets/pictures/detail_page.png)
 
-https://github.com/Bikcodeh/app-peliculas-flutter/assets/pictures/search_delegate.png
+(https://github.com/Bikcodeh/app-peliculas-flutter/blob/master/assets/pictures/detail_page.png)
